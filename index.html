@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>QualVaiSer? - Gerador de Sorteios Nacionais</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="glow-orb a"></div>
+    <div class="glow-orb b"></div>
+
+    <div class="container">
+      <header>
+        <div class="logo">
+          <div class="logo-icon">🎱</div>
+          <div class="logo-text">QualVai<span>Ser?</span></div>
+        </div>
+        <div class="header-badge">v2.0 · 5 loterias</div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-eyebrow">Gerador inteligente de números</div>
+        <h1>Sorteios nacionais,<br /><em>um clique longe</em></h1>
+        <p>
+          Números gerados com base em frequência histórica real dos maiores
+          sorteios do mundo.
+        </p>
+      </section>
+
+      <div class="section-label">Escolha a loteria</div>
+      <div class="lottery-grid" id="lotteryGrid"></div>
+
+      <div class="info-strip" id="infoBox"></div>
+
+      <div class="controls-grid">
+        <div class="ctrl-panel">
+          <h3>Cartelas a gerar</h3>
+          <div class="slider-row">
+            <input
+              type="range"
+              id="numCartelas"
+              min="1"
+              max="10"
+              value="3"
+              step="1"
+            />
+            <span class="slider-val" id="cartelasVal">3</span>
+          </div>
+        </div>
+        <div class="ctrl-panel">
+          <h3>Estratégia de seleção</h3>
+          <div class="mode-btns">
+            <button class="mode-btn active" data-mode="smart">
+              Inteligente
+            </button>
+            <button class="mode-btn active" data-mode="hot">Quentes</button>
+            <button class="mode-btn active" data-mode="cold">Frios</button>
+            <button class="mode-btn active" data-mode="random">
+              Aleatórios
+            </button>
+            <button class="mode-btn active" data-mode="mixed">Misto</button>
+          </div>
+          <div class="mode-desc" id="modeDesc"></div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button class="btn-generate" id="genBtn">
+          <div class="btn-inner">
+            <span class="genIcon">🎲</span>
+            <span class="genLabel">Gerar números</span>
+          </div>
+        </button>
+        <button class="btn-icon-action" id="saveBtn">💾 Salvar</button>
+        <button class="btn-icon-action" id="clearBtn">🗑 Limpar</button>
+      </div>
+
+      <div class="stats-bar" id="statsBar">
+        <div class="stat-card">
+          <div class="stat-val" id="s1">—</div>
+          <div class="stat-lbl">CARTELAS</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="s2">—</div>
+          <div class="stat-lbl">NÚMEROS/CARTELA</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val" id="s3">—</div>
+          <div class="stat-lbl">COMBINAÇÕES ÚNICAS</div>
+        </div>
+      </div>
+
+      <div class="results-area" id="resultsArea">
+        <div class="empty-state">
+          <span class="empty-icon">🎫</span>
+          <p>
+            Escolha um loteria acima e clique em <strong>Gerar números</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="notice">
+        ⚠️ Este gerador usa frequência histórica como referência, mas todos os
+        sorteios são estatisticamente independentes. Jogue com responsabilidade.
+      </div>
+
+      <div class="history-section" id="historySection">
+        <div class="history-header">
+          <div class="section-label" style="margin: 0">Histórico salvo</div>
+          <button
+            class="btn-icon-action"
+            style="padding: 6px 12px; font-size: 11px"
+            id="clearHistory"
+          >
+            Apagar tudo
+          </button>
+        </div>
+        <div id="historyList"></div>
+      </div>
+
+      <footer>
+        QualVaiSer? · 5 loterias da Caixa Econômica Federal · Jogue com
+        responsabilidade
+      </footer>
+    </div>
+
+    <script></script>
+  </body>
+</html>

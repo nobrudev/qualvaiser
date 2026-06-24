@@ -1,0 +1,65 @@
+.action-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.btn-generate {
+  flex: 1;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: -0.01em;
+  position: relative;
+  overflow: hidden;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.btn-generate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(124, 106, 255, 0.35);
+}
+
+.btn-generate.active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-generate.loading {
+  pointer-events: none;
+}
+
+.btn-generate,
+.btn-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-icon-action {
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 16px;
+  transition: all 0.12s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.btn-icon-action:hover {
+  border-color: var(--border-bright);
+  color: var(--text);
+  background: var(--surface2);
+}

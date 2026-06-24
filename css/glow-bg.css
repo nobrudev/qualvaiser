@@ -1,0 +1,32 @@
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orb,
+.a {
+  width: 600px;
+  top: -200px;
+  left: -100px;
+  background: rgba(124, 106, 255, 0.12);
+}
+
+.glow-orb,
+.b {
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: -100px;
+  background: rgba(121684, 85, 247, 0.1);
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}

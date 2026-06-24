@@ -1,0 +1,85 @@
+.section-label {
+  font-size: 11px;
+  font-family: "Space Mono", monospace;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.lottery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.lottery-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.lottery-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  opacity: 0;
+  transition: opacity.15s;
+}
+
+.lottery-btn:hover {
+  border-color: var(--border-bright);
+  transform: translateY(-1px);
+}
+
+.lottery-btn.active {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent) inset,
+    0 4px 24px rgba(124, 106, 255, 0.2);
+}
+
+.lottery-btn .flag {
+  font-size: 18px;
+  margin-bottom: 6px;
+  display: block;
+  position: relative;
+}
+
+.lottery-btn .lname {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-top: 3px;
+  position: relative;
+  font-family: "Space Mono", monospace;
+}
+
+.lottery-btn .lcountry {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  position: relative;
+  font-family: "Space Mono", monospace;
+}
+
+.lottery-btn .lrange {
+  font-size: 10px;
+  color: var(--accent);
+  margin-top: 4px;
+  position: relative;
+  font-family: "Space Mono", monospace;
+}
+
+.lottery-btn.active .flag,
+.lottery-btn.active .lrange {
+  position: relative;
+}

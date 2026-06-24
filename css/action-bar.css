@@ -23,10 +23,10 @@
 
 .btn-generate:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(124, 106, 255, 0.35);
+  box-shadow: 0 8px 32px rgba(50, 100, 255, 0.35);
 }
 
-.btn-generate.active {
+.btn-generate:active {
   transform: translateY(0) scale(0.98);
 }
 
@@ -34,8 +34,7 @@
   pointer-events: none;
 }
 
-.btn-generate,
-.btn-inner {
+.btn-generate .btn-inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +54,7 @@
   align-items: center;
   gap: 8px;
   font-size: 13px;
+  font-weight: 500;
   font-family: "Space Grotesk", sans-serif;
 }
 

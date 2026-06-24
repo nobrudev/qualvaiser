@@ -41,10 +41,10 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: linear-gradient(135deg, #3264ff, #f3e600);
   cursor: pointer;
   border: 2px solid var(--bg);
-  box-shadow: 0 2px 8px rgba(124, 106, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(50, 100, 255, 0.4);
 }
 
 .slider-val {
@@ -75,13 +75,8 @@
   font-weight: 500;
 }
 
-.mode-btn:hover {
-  border-color: var(--border-bright);
-  color: var(--text);
-}
-
 .mode-btn.active {
-  background: rgba(124, 106, 255, 0.15);
+  background: rgba(50, 100, 255, 0.15);
   border-color: var(--accent);
   color: var(--accent);
 }

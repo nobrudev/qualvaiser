@@ -61,8 +61,8 @@
   font-size: 10px;
   padding: 3px 10px;
   border-radius: 20px;
-  background: rgba(124, 105, 255, 0.12);
-  border: 1px solid rgba(124, 105, 255, 0.25);
+  background: rgba(50, 100, 255, 0.12);
+  border: 1px solid rgba(50, 100, 255, 0.25);
   color: var(--accent);
   font-family: "Space Mono", monospace;
 }
@@ -71,7 +71,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-self: center;
+  align-items: center;
 }
 
 .ball {
@@ -94,21 +94,21 @@
 }
 
 .ball.hot {
-  background: rgba(255, 107, 74, 12);
+  background: rgba(243, 230, 0, 0.1);
   color: var(--hot);
-  border: 1.5px solid rgba(255, 107, 74, 0.35);
+  border: 1.5px solid rgba(243, 230, 0, 0.35);
 }
 
 .ball.warm {
-  background: rgba(245, 166, 35, 0.12);
+  background: rgba(255, 176, 32, 0.1);
   color: var(--warm);
-  border: 1.5px solid rgba(245, 166, 35, 0.35);
+  border: 1.5px solid rgba(255, 176, 32, 0.35);
 }
 
 .ball.cold {
-  background: rgba(74, 184, 255, 0.12);
+  background: rgba(50, 100, 255, 0.12);
   color: var(--cold);
-  border: 1.5px solid rgba(74, 184, 255, 0.35);
+  border: 1.5px solid rgba(50, 100, 255, 0.3);
 }
 
 .ball.normal {
@@ -118,15 +118,15 @@
 }
 
 .ball.special {
-  background: rgba(176, 106, 255, 0.15);
+  background: rgba(243, 230, 0, 0.15);
   color: var(--special);
-  border: 1px solid rgba(176, 106, 255, 0.35);
+  border: 2px solid rgba(243, 230, 0, 0.45);
 }
 
 .ball.bonus {
-  background: rgba(56, 244, 154, 0.12);
+  background: rgba(56, 224, 154, 0.12);
   color: var(--bonus);
-  border: 1.5px solid rgba(56, 244, 154, 0.3);
+  border: 1.5px solid rgba(56, 224, 154, 0.3);
 }
 
 .ball-divider {
@@ -156,5 +156,6 @@
 
 .legend-dot {
   width: 8px;
+  height: 8px;
   border-radius: 50%;
 }

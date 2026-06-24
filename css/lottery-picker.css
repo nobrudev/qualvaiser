@@ -32,7 +32,7 @@
   inset: 0;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   opacity: 0;
-  transition: opacity.15s;
+  transition: opacity 0.15s;
 }
 
 .lottery-btn:hover {
@@ -44,9 +44,8 @@
   border-color: var(--accent);
   box-shadow:
     0 0 0 1px var(--accent) inset,
-    0 4px 24px rgba(124, 106, 255, 0.2);
+    0 4px 24px rgba(50, 100, 255, 0.2);
 }
-
 .lottery-btn .flag {
   font-size: 18px;
   margin-bottom: 6px;
@@ -57,10 +56,9 @@
 .lottery-btn .lname {
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-muted);
-  margin-top: 3px;
+  color: var(--text);
   position: relative;
-  font-family: "Space Mono", monospace;
+  line-height: 1.2;
 }
 
 .lottery-btn .lcountry {
@@ -80,6 +78,8 @@
 }
 
 .lottery-btn.active .flag,
+.lottery-btn.active .lname,
+.lottery-btn.active .lcountry,
 .lottery-btn.active .lrange {
   position: relative;
 }

@@ -6,21 +6,20 @@
   z-index: 0;
 }
 
-.glow-orb,
-.a {
+.glow-orb.a {
   width: 600px;
+  height: 600px;
   top: -200px;
   left: -100px;
-  background: rgba(124, 106, 255, 0.12);
+  background: rgba(50, 100, 255, 0.12);
 }
 
-.glow-orb,
-.b {
+.glow-orb.b {
   width: 500px;
   height: 500px;
   bottom: -100px;
   right: -100px;
-  background: rgba(121684, 85, 247, 0.1);
+  background: rgba(243, 230, 0, 0.06);
 }
 
 .container {

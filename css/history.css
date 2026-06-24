@@ -60,9 +60,9 @@
 }
 
 .hball.sp {
-  background: rgba(176, 106, 255, 0.15);
-  color: var(--special);
-  border-color: rgba(176, 106, 255, 0.3);
+  background: rgba(243, 230, 0, 0.12);
+  color: var(--yellow);
+  border-color: rgba(243, 230, 0, 0.3);
 }
 
 .h-count {

@@ -40,3 +40,36 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
+
+@media (max-width: 600px) {
+  .controls-grid {
+    grid-template-columns: 1fr;
+  }
+  .action-bar {
+    flex-wrap: wrap;
+  }
+  .btn-generate {
+    order: -1;
+    flex-basis: 100%;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .lottery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .balls .ball {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cartela {
+    animation: none;
+  }
+  * {
+    transition: none !important;
+  }
+}

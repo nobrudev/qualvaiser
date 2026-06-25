@@ -242,3 +242,85 @@ function generate() {
     btn.classList.remove("loading");
   }, 300);
 }
+
+document.getElementById("numCartelas").addEventListener("input", function () {
+  document.getElementById("cartelasVal").textContent = this.value;
+});
+
+document
+  .getElementById("modeBtns")
+  .querySelectorAll(".mode-btn")
+  .forEach((b) => {
+    b.addEventListener("click", () => {
+      currentMode = b.dataset.mode;
+      document
+        .querySelectorAll(".mode-btn")
+        .forEach((x) => x.classList.remove("active"));
+      b.classList.add("active");
+      document.getElementById("modeDesc").textContent = MODES[currentMode].desc;
+    });
+  });
+
+document.getElementById("genBtn").addEventListener("click", generate);
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  document.getElementById("resultsArea").innerHTML =
+    '<div class="empty-state"><span> class="empty-icon">🎫</span><p>Escolha uma loteria acima e clique em <strong>Gerar números</strong></p></div>';
+  document.getElementById("statsBar").style.display = "none";
+  document.getElementById("genLabel").textContent = "Gerar números";
+  document.getElementById("genIcon").textContent = "🎲";
+});
+
+document.getElementById("saveBtn").addEventListener("click", () => {
+  const cards = document.querySelectorAll(".cartela");
+  if (!cards.length) return;
+  const ts = new Date().toLocaleTimeString("pt-BR", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  const firstBalls = [...cards[0].querySelectorAll("ball:not(.special")].map(
+    (b) => b.textContent,
+  );
+  const firstSpecial = [...cards[0].querySelectorAll("ball.special")].map(
+    (b) => b.textContent,
+  );
+  savedHistory.unshift({
+    time: ts,
+    lottery: currentLottery.name,
+    flag: currentLottery.flag,
+    nums: firstBalls,
+    special: firstSpecial,
+    total: cards.length,
+  });
+  if (savedHistory.length > 8) savedHistory.pop();
+  renderHistory();
+});
+
+function renderHistory() {
+  const hs = document.getElementById("historySection");
+  hs.style.display = "block";
+  document.getElementById("historyList").innerHTML = savedHistory
+    .map(
+      (h) => `
+    <div class="history-item">
+      <span class="h-time">${h.time}</span>
+      <span class="h-name">${h.flag} ${h.lottery}</span>
+      <div class="h-balls">${h.nums
+        .slice(0, 7)
+        .map((n) => `<div class="hball">${n}</div>`)
+        .join(
+          "",
+        )}${h.special.map((n) => `<div class="hball sp">${n}</div>`).join("")}</div>
+      <span class="h-count">${h.total} cartela${h.total > 1 ? "s" : ""}</span>
+    </div>`,
+    )
+    .join("");
+}
+
+document.getElementById("clearHistory").addEventListener("click", () => {
+  savedHistory = [];
+  document.getElementById("historySection").style.display = "none";
+});
+
+buildGrid();
+updateInfo();

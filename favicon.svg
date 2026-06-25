@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0f1624"/>
+  <!-- Folha topo -->
+  <path d="M16 14.5 C15.7 13.3 12.5 11.5 12.4 9.2 C12.2 6.5 13.9 5.5 16 5.8 C18.1 5.5 19.8 6.5 19.6 9.2 C19.5 11.5 16.3 13.3 16 14.5Z"
+    fill="none" stroke="#3264FF" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Folha baixo -->
+  <path d="M16 17.5 C16.3 18.7 19.5 20.5 19.6 22.8 C19.8 25.5 18.1 26.5 16 26.2 C13.9 26.5 12.2 25.5 12.4 22.8 C12.5 20.5 15.7 18.7 16 17.5Z"
+    fill="none" stroke="#3264FF" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Folha esquerda -->
+  <path d="M14.5 16 C13.3 15.7 11.5 13.2 9.2 13.1 C6.5 12.9 5.5 14.6 5.8 16 C5.5 17.4 6.5 19.1 9.2 18.9 C11.5 18.8 13.3 16.3 14.5 16Z"
+    fill="none" stroke="#3264FF" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Folha direita (amarela) -->
+  <path d="M17.5 16 C18.7 15.7 20.5 13.2 22.8 13.1 C25.5 12.9 26.5 14.6 26.2 16 C26.5 17.4 25.5 19.1 22.8 18.9 C20.5 18.8 18.7 16.3 17.5 16Z"
+    fill="none" stroke="#F3E600" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Centro -->
+  <circle cx="16" cy="16" r="2" fill="#F3E600"/>
+  <circle cx="16" cy="16" r="1" fill="#0f1624"/>
+  <!-- Cabo -->
+  <path d="M16 26.2 C16 28 15.2 29.5 14 30.2" fill="none" stroke="#3264FF" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
